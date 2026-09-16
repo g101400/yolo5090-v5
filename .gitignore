@@ -1,0 +1,13 @@
+# Build artifacts
+*.iml
+.gradle/
+build/
+/local.properties
+/.idea/
+.DS_Store
+captured_*/
+*.apk
+*.aar
+*.keystore
+
+# Model weights in app/src/main/assets/ ARE tracked (original v5lite weights, required to build).

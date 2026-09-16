@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    // 原 compileSdk 24 会导致安装后出现「此应用专为旧版 Android 系统打造」提示
+    namespace "ncnn.v5lite.demo"
+    compileSdk 34
+    buildToolsVersion "34.0.0"
+
+    defaultConfig {
+        applicationId "com.ncnn.v5lite.demo"
+        archivesBaseName = "$applicationId"
+
+        minSdk 24
+        targetSdk 34
+
+        // 1.2.1 -> major*10000 + minor*100 + patch，保证单调递增
+        versionCode 10201
+        versionName "1.2.1"
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/jni/CMakeLists.txt')
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.10.1'
+}

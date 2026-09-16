@@ -1,0 +1,17 @@
+// 顶层构建脚本：已升级到 AGP 8.x（原 3.5.4 + jcenter 已停用，无法构建）
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

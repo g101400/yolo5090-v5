@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YOLOv5-Lite 识别</string>
+    <string name="app_title">YOLOv5-Lite 目标识别</string>
+
+    <!-- 状态栏 -->
+    <string name="status_none">未检测到物体</string>
+    <string name="status_detected">检测到 %1$d 个物体：%2$s</string>
+
+    <!-- 菜单 -->
+    <string name="menu_help">帮助</string>
+    <string name="menu_about">关于</string>
+    <string name="btn_ok">确定</string>
+
+    <string name="help_content">使用说明：\n\n1. 首次进入请允许「相机」权限；Android 9 及以下还需允许「存储」权限用于保存结果。\n\n2. 上方状态栏实时显示当前识别到的物体数量与名称（中文）。\n\n3. 每次识别结果会自动保存到手机【公共 Downloads/YOLOv5Lite/】目录，按天生成一个 CSV 文件（detect_年-月-日.csv），字段为：时间、物体、置信度，历史按天保留。\n\n4. 「切换摄像头」可切换前/后置摄像头；模型下拉框可切换不同尺寸与精度模型；CPU/GPU 下拉框可切换推理后端（无 GPU 时会自动回落）。\n\n5. 画面右上角菜单可查看「帮助」与「关于」。</string>
+
+    <string name="about_content">YOLOv5-Lite 目标识别\n\n版本号：%1$s\n\n推理引擎：ncnn（v5lite 系列模型）\n\n检测结果保存位置：\n%2$s\n\n结果字段：时间、物体、置信度\n历史记录：按天保留，每天一个 CSV 文件</string>
+
+    <string name="msg_model_load_failed">模型加载失败，请检查 assets 模型文件</string>
+
+    <string-array name="model_array">
+        <item>320-lite-e</item>
+        <item>416-lite-e</item>
+        <item>320-lite-i8e</item>
+        <item>416-lite-i8e</item>
+        <item>416-lite-s</item>
+        <item>416-lite-i8s</item>
+        <item>512-lite-c</item>
+    </string-array>
+    <string-array name="cpugpu_array">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array>
+</resources>
